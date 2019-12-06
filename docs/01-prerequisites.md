@@ -1,54 +1,20 @@
 # Prerequisites
 
-## Google Cloud Platform
+## Amazon Web Services
 
-This tutorial leverages the [Google Cloud Platform](https://cloud.google.com/) to streamline provisioning of the compute infrastructure required to bootstrap a Kubernetes cluster from the ground up. [Sign up](https://cloud.google.com/free/) for $300 in free credits.
-
-[Estimated cost](https://cloud.google.com/products/calculator/#id=55663256-c384-449c-9306-e39893e23afb) to run this tutorial: $0.23 per hour ($5.46 per day).
-
-> The compute resources required for this tutorial exceed the Google Cloud Platform free tier.
+This tutorial leverages [Amazon Web Services](https://aws.amazon.com/) to streamline provisioning of the compute infrastructure required to bootstrap a Kubernetes cluster from the ground up.
 
 ## Google Cloud Platform SDK
 
 ### Install the Google Cloud SDK
 
-Follow the Google Cloud SDK [documentation](https://cloud.google.com/sdk/) to install and configure the `gcloud` command line utility.
-
-Verify the Google Cloud SDK version is 262.0.0 or higher:
-
-```
-gcloud version
-```
+Follow the AWS [documentation](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html) to install and configure the `aws` command line utility.
 
 ### Set a Default Compute Region and Zone
 
-This tutorial assumes a default compute region and zone have been configured.
+This tutorial assumes a default region and credentials have been configured.
 
-If you are using the `gcloud` command-line tool for the first time `init` is the easiest way to do this:
-
-```
-gcloud init
-```
-
-Then be sure to authorize gcloud to access the Cloud Platform with your Google user credentials:
-
-```
-gcloud auth login
-```
-
-Next set a default compute region and compute zone:
-
-```
-gcloud config set compute/region us-west1
-```
-
-Set a default compute zone:
-
-```
-gcloud config set compute/zone us-west1-c
-```
-
-> Use the `gcloud compute zones list` command to view additional regions and zones.
+If you are using the `aws` command-line tool for the first time, please see the AWS [documentation](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html) to get started.
 
 ## Running Commands in Parallel with tmux
 
